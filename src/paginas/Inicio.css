@@ -1,0 +1,12 @@
+
+
+
+.contenedor-Inicio{
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #512DA8;
+    align-items: left;
+    justify-content: left;
+}
+

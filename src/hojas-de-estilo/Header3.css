@@ -1,0 +1,90 @@
+.Header-total3 {
+    background-color: #23212A;
+    height: 60px;
+    align-items: center;
+}
+
+.flecha3 {
+    position: relative;
+    bottom: -5px;
+}
+
+.flecha3 ion-icon {
+    color:#23212A;
+    font-size: 48px;
+}
+
+.icono-casita3 {
+    position: relative;
+    bottom: 15px;
+    right: 50px;
+}
+
+.icono-casita3 ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono-corazon3 {
+    position: relative;
+    left: 1080px;
+    top: 2px;
+}
+
+.icono-corazon3 ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono-carrito3 {
+    position: relative;
+    left: 1130px;
+    top: 2px;
+}
+
+.icono-carrito3 ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+
+.icono-persona3 {
+    position: relative;
+    left: 1180px;
+    top: 2px;
+}
+
+.icono-persona3 ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono {
+    position: relative;
+    top: -65px;
+    left: 1280px;
+}
+
+.icono ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+DropdownMenu {
+    background-color: rgb(0, 0, 0);
+}
+
+.DropdownItem {
+    background-color: rgb(0, 0, 0);
+}

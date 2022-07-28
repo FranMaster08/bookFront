@@ -1,0 +1,281 @@
+.Misdatos-todoad {
+    background-color: #512DA8;
+    padding-bottom: 00px;
+    padding-top: 100px;
+}
+
+.botoneditar:link
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.botoneditar:visited
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.botoneditar:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.botoneditar:active
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.Misdatos {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 30px;
+    position: relative;
+    bottom: -20px;
+}
+
+.Datosdcuenta {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -30px;
+}
+
+.Datos-cuenta {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 100px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -13px;
+}
+
+.D-usuario {
+    color: rgb(0, 0, 0);
+    margin: 25px 5px;
+    font-size: 20px;
+    position: relative;
+    bottom: 25px;
+}
+
+.D-email {
+    color: rgb(0, 0, 0);
+    margin: 25px 5px;
+    font-size: 20px;
+    position: relative;
+    bottom: 85px;
+}
+
+.D-linea1 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px -15px;
+    position: relative;
+    bottom: 70px;
+}
+
+.Personales {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -35px;
+}
+
+.Datos-personales {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 150px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -20px;
+}
+
+.Dp-nym {
+    color: rgb(0, 0, 0);
+    margin: 25px 5px;
+    font-size: 20px;
+    position: relative;
+    bottom: 25px;
+}
+
+.Dp-doc {
+    color: rgb(0, 0, 0);
+    margin: 25px 5px;
+    font-size: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+.Dp-tel {
+    color: rgb(0, 0, 0);
+    margin: 25px 5px;
+    font-size: 20px;
+    position: relative;
+    bottom: 140px;
+}
+
+.Dp-linea1 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px -15px;
+    position: relative;
+    bottom: 70px;
+}
+
+.Dp-linea2 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px -15px;
+    position: relative;
+    bottom: 125px;
+}
+
+
+.Tarjeta {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -40px;
+}
+
+.Datos-tarjeta {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 100px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -45px;
+}
+
+.imagen-mercadopago {
+    height: 40px;
+    width: 60px;
+    position: relative;
+    bottom: -25px;
+    right: -13px;
+}
+
+.circulo-tarjeta {
+    height:85px;
+    width:85px;
+    background:#E76AFA;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px;
+    position: absolute;
+    bottom: 8px;
+    left: 30px;
+ }
+
+ .Terminacion {
+    color: rgb(0, 0, 0);   
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -2px;
+    right: 60px;
+ }
+
+ .Dp-texto {
+    color: rgba(0, 0, 0, 0.692);   
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 16px;
+    position: relative;
+    right: 60px;
+    bottom: -8px;
+ }
+
+ .Vencimiento {
+    color: rgba(0, 0, 0, 0.692);
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 16px;
+    position: relative;
+    right: 60px;
+    bottom: -8px;
+ }
+
+ .usuario-misdatos {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.correo-misdatos {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.nyp-misdatos {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.dni-misdatos {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.tel-misdatos {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+ 
+.busquedamd {
+    position: relative;
+    bottom: 77px;
+    left: 420px;
+    width: 40px;
+}
+
+.busqueda-ad {
+    color: rgba(0, 0, 0, 0.342);
+    font-size: 26px;
+    position: relative;
+    bottom: 143px;
+    left: 420px;
+    width: 40px;
+}
+
+.mover2 {
+    position: relative;
+    bottom: 172px;
+}

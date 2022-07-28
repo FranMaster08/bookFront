@@ -1,0 +1,282 @@
+.Misdatos-todo2 {
+    background-color: #512DA8;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.mover {
+    position: relative;
+    bottom: 110px;
+}
+
+.guardardatos {
+    position: relative;
+    left: 1055px;
+    bottom: -80px;
+    width: 90px;
+    height: 40px;
+}
+
+.Misdatos2 {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 30px;
+    position: relative;
+    bottom: -20px;
+}
+
+.Datosdcuenta2 {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -300px;
+}
+
+.Datosdcuenta2 {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -30px;
+}
+
+.Datos-cuenta2 {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 110px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -35px;
+}
+
+.D-usuario2 {
+    color: rgb(0, 0, 0);
+    margin: 25px 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+
+.D-email2 {
+    color: rgb(0, 0, 0);
+    margin: 25px 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 60px;
+    right: 10px;
+}
+
+.D-linea1-2 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px 0px;
+    position: relative;
+    bottom: 45px;
+    right: 16px;
+}
+
+.Personales2 {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -45px;
+}
+
+.Datos-personales2 {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 165px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -50px;
+}
+
+.Dp-nym2 {
+    color: rgb(0, 0, 0);
+    margin: 25px 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 25px;
+    right: 10px;
+}
+
+.Dp-doc2 {
+    color: rgb(0, 0, 0);
+    margin: 25px 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 85px;
+    right: 10px;
+}
+
+.tet{
+    background-color: white;
+    color: rgb(199, 16, 16);
+    right: -100px;
+    width: 440px;
+    height: 14px;
+    border: disabled;
+    bottom: 10px;
+}
+
+.Dp-tel2 {
+    color: rgb(0, 0, 0);
+    margin: 25px 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 115px;
+    right: 10px;
+}
+
+.Dp-linea1-2 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px 0px;
+    position: relative;
+    bottom: 70px;
+    right: 16px;
+}
+
+.Dp-linea2-2 {
+    height: 1px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 1px 0px;
+    position: relative;
+    bottom: 100px;
+    right: 16px;
+}
+
+.Tarjeta2 {
+    color:white;
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: -60px;
+}
+
+.Datos-tarjeta2 {
+    margin-left: 204px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 950px;
+    height: 100px;
+    margin: 10px 10px 0x;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: -65px;
+}
+
+.imagen-mercadopago2 {
+    height: 40px;
+    width: 60px;
+    position: relative;
+    bottom: -25px;
+    right: -13px;
+}
+
+.circulo-tarjeta2 {
+    height:85px;
+    width:85px;
+    background:#E76AFA;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px;
+    position: absolute;
+    bottom: 8px;
+    left: 30px;
+}
+
+.Terminacion2 {
+    color: rgb(0, 0, 0);   
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 18px;
+    position: relative;
+    bottom: 10px;
+    right: 60px;
+}
+
+.Dp-texto2 {
+    color: rgba(0, 0, 0, 0.692);   
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 16px;
+    position: relative;
+    right: 60px;
+    bottom: 5px;
+}
+
+.Vencimiento2 {
+    color: rgba(0, 0, 0, 0.692);
+    margin: 0px 204px;
+    width: 260px;
+    font-size: 16px;
+    position: relative;
+    right: 60px;
+    bottom: 5px;
+}
+
+.usuario-misdatos2 {
+    position: relative;
+    left: 530px;
+    color: rgba(0, 0, 0, 0.342);
+    width: 300px;
+}
+
+.correo-misdatos2 {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.nyp-misdatos2 {
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+    width: 340px;
+}
+
+.dni-misdatos2 {
+    position: relative;
+    left: 495px;
+    color: rgba(0, 0, 0, 0.342);
+    width: 300px;
+}
+
+.tel-misdatos2 {
+    position: relative;
+    left: 520px;
+    color: rgba(0, 0, 0, 0.342);
+    width: 300px;
+}
+
+.busquedamd2 {
+    position: relative;
+    bottom: 77px;
+    left: 420px;
+    width: 40px;
+}

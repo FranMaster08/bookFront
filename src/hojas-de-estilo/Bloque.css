@@ -1,0 +1,51 @@
+.contenedor-bloque h1{
+    font-size: 90px;
+    font-family: 'Radley', serif;
+    color: #fff
+}
+
+.imagen-bk{
+    height: 280px;
+    width: 450px;
+    float: left;
+    margin: 30px 0px;
+}
+
+.contenedor-login{
+    width: 500px;
+    height: 280px;
+    margin: 30px 168px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    float:right;
+}
+
+.contenedor-login h1{
+    font-size: 27px;
+    font-family: 'Radley', serif;
+    color: #512DA8;
+    margin: 20px 80px;
+    text-align: center;
+   
+}
+
+.parrafo1{
+    margin: 0px;
+    color: #fff;
+    font-size: 27px;
+    font-family: 'Radley', serif;
+}
+
+.logo-bk{
+    width: 140px;
+    height: 140px;
+    float: right;
+}
+
+.contenedor-bloque{
+    margin: 30px
+}
+.ordenar-face {
+    justify-content: center;
+    align-items: center;
+}

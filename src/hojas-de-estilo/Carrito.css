@@ -1,0 +1,28 @@
+
+.shopcar-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.total-info{
+    height: 15vh;
+    width : 25vw;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.shopcar-container .footer-total {
+    position: fixed !important;
+    bottom: 0 !important;
+
+}
+
+.busquedacar {
+    position: relative;
+    width: 40px;
+    bottom: 57px;
+    left: 420px;
+}

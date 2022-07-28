@@ -1,0 +1,10 @@
+.loginWrapper2 {
+    height: 100px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+    margin-left: 60px;
+    margin-right: 60px;
+}

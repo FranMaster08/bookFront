@@ -1,0 +1,179 @@
+.Header-total {
+    background-color: #23212A;
+    height: 60px;
+    align-items: center;
+}
+
+.flecha {
+    position: relative;
+    bottom: -5px;
+}
+
+.flecha ion-icon {
+    color: white;
+    font-size: 48px;
+}
+
+
+.cassita {
+    position: relative;
+    bottom: 50px;
+    right: 5px;
+}
+
+.cassita ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono-persona {
+    position: relative;
+    left: 1270px;
+    bottom: 10px;
+}
+
+.icono-persona ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono-carrito {
+    position: relative;
+    left: 1230px;
+    bottom: 147px;
+}
+
+.icono-carrito ion-icon {
+    color: white;
+    font-size: 40px;
+}
+.icono-corazon {
+    position: relative;
+    left: 1190px;
+    bottom: 103px;
+}
+
+.icono-corazon ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.icono-busqueda {
+    position: relative;
+    left: 10px;
+}
+
+.icono-busqueda ion-icon {
+    color: rgba(0, 0, 0, 0.349);
+    font-size: 40px;
+}
+
+.contenedor-busqueda {
+    border-radius: 40px;
+    background-color: white;
+    width: 400px;
+    height: 45px;
+    position: relative;
+    bottom: 98px;
+    left: 350px;
+}
+
+.tex-buscar {
+    color: rgba(0, 0, 0, 0.342);
+    margin: 0px 0px;
+    width: 300px;
+    font-size: 26px;
+    position: relative;
+    bottom: 10px;
+    right: -25px;
+    border: solid 1px white
+}
+
+.icono2 {
+    position: relative;
+    bottom: 199px;
+    left: 1280px;
+}
+
+.icono2 ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.misdatosfo:link
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.misdatosfo:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.misdatosfo:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.misdatosfo:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.cerrarsesionfo:link
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.cerrarsesionfo:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.cerrarsesionfo:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.cerrarsesionfo:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.busquedahead {
+    position: relative;
+    bottom: 40px;
+    left: 50px;
+}
+
+.resfo:link
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.resfo:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.resfo:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.resfo:active
+{
+    color: #000000;
+    text-decoration: none;
+}
