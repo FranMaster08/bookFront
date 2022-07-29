@@ -46,7 +46,7 @@ function HeaderAdm(){
         e.preventDefault();
         if (datos.id_rol == 10) {
             console.log('es usuario')
-            (window.location.href = `http://localhost:3000/carrito?carrito=${datos.correo}`)
+            (window.location.href = `http://localhost:3000/carrito?user=${datos.correo}`)
         } else {
             console.log('es admin y el boton no funciona')
         }

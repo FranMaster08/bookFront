@@ -12,7 +12,7 @@ import { Box } from "@mui/system";
 import { useParams } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "../hojas-de-estilo/Detalle.css";
-import BarraBusqueda from './BarraBusqueda';
+import BarraBusqueda from "./BarraBusqueda";
 import { createPayment } from "../services/mercado.service";
 
 const ListadeLibros2 = () => {
@@ -29,20 +29,19 @@ const ListadeLibros2 = () => {
 
   const [ejemplares1, setEjemplares] = useState([]);
 
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState(1);
 
   const sumar = () => {
     setCount(count + 1);
-  }
+  };
 
   const restar = () => {
     if (count <= 1) {
-      console.log('es 1')
+      console.log("es 1");
     } else {
       setCount(count - 1);
     }
-    
-  }
+  };
 
   const getEjemplar = async () => {
     try {
@@ -61,44 +60,47 @@ const ListadeLibros2 = () => {
     getEjemplar();
   }, []);
 
-  const cargarEnCarrito = () => {
-    // Leemos localStorage
-    const datosEnCarrito = JSON.parse(localStorage.getItem("carrito"));
-    const libroExiste = datosEnCarrito.some(
-      (item) => item.titulo === ejemplares1.titulo
-    );
+  const cargarEnCarrito = async () => {
+    try {
+  
 
-    if (libroExiste) {
-      const upLoadedBook = datosEnCarrito.find(
-        (item) => item.titulo === ejemplares1.titulo
-      );
-      const img = ejemplares1.img
-        ? require(`../imagenes/${ejemplares1.img}`)
-        : "";
-      upLoadedBook.img = img;
+      let mail = window.location.pathname
+        .split("/")
+        .filter((item) => item !== "")[0];
+      mail = mail === "undefined" ? "general@mail.com" : mail;
+      const myHeaders = new Headers();
 
-      const cantidad = parseInt(upLoadedBook.cantidadEnCarrito) + 1;
-      console.log(cantidad);
-      const libro = {
-        ...upLoadedBook,
-        cantidadEnCarrito: cantidad,
+      myHeaders.append("Content-Type", "application/json");
+
+      const raw = JSON.stringify({
+        cantidad: 1,
+        precio: ejemplares1.precioactual,
+        id_lineaventa: 1,
+        id_venta: 1,
+        id_ejemplar: ejemplares1.id_ejemplar,
+        img: ejemplares1.img,
+        titulo: ejemplares1.titulo,
+        autor: ejemplares1.autor,
+        nombreusuario: mail,
+      });
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
       };
 
-      const ListaDelibroActualizado = datosEnCarrito.map((item) => {
-        if (item.titulo === ejemplares1.titulo) {
-          return libro;
-        }
-      });
-      localStorage.setItem("carrito", JSON.stringify(ListaDelibroActualizado));
-    } else {
-      const img = ejemplares1.img
-        ? require(`../imagenes/${ejemplares1.img}`)
-        : "";
-      ejemplares1.img = img;
-      ejemplares1.cantidadEnCarrito = 1;
-      datosEnCarrito.push(ejemplares1);
-      localStorage.setItem("carrito", JSON.stringify(datosEnCarrito));
+      const response = await fetch(
+        "http://localhost:4000/carrito",
+        requestOptions
+      );
+      const result = await response.json();
+      return true;
+    } catch (error) {
+      console.log(error);
     }
+    // Leemos localStorage
   };
 
   const {
@@ -117,7 +119,9 @@ const ListadeLibros2 = () => {
   return (
     <>
       <Container maxWidth="400" className="contenedor-detalle">
-      <h1 className='busquedet'><BarraBusqueda/></h1>
+        <h1 className="busquedet">
+          <BarraBusqueda />
+        </h1>
         <Card
           sx={{
             display: "flex",
@@ -246,7 +250,6 @@ const ListadeLibros2 = () => {
                 color: "white",
               }}
             >
-
               <Button
                 variant="contained"
                 sx={{
@@ -256,13 +259,11 @@ const ListadeLibros2 = () => {
                   fontFamily: "Roboto",
                   marginLeft: 9,
                 }}
-                onClick={() =>
-                  Comprar(1, precioactual)}
+                onClick={() => Comprar(1, precioactual)}
               >
                 Comprar
               </Button>
 
-              
               <Button
                 onClick={() => cargarEnCarrito()}
                 variant="contained"
@@ -285,19 +286,17 @@ const ListadeLibros2 = () => {
             </Card>
           </Box>
         </Card>
-                <div className="pr">
-                    
-                  <div className="dd">
-                    <ion-icon name="add" onClick={() => sumar()}></ion-icon>
-                  </div>  
+        <div className="pr">
+          <div className="dd">
+            <ion-icon name="add" onClick={() => sumar()}></ion-icon>
+          </div>
 
-                  <div className="dd2">
-                    <ion-icon name="remove-outline" onClick={() => restar()}></ion-icon>
-                  </div> 
-                
-                  <h1 className="cont">{count}</h1>
-                    
-                </div>
+          <div className="dd2">
+            <ion-icon name="remove-outline" onClick={() => restar()}></ion-icon>
+          </div>
+
+          <h1 className="cont">{count}</h1>
+        </div>
       </Container>
     </>
   );

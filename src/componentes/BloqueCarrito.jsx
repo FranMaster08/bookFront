@@ -1,30 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/BloqueCarrito.css";
 import { createPayment } from "../services/mercado.service";
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
 function BloqueCarrito() {
-
   const [librosCarrito, setlibrosCarrito] = useState([]);
-  
+
   const cargarCarrito = async () => {
-        const response = await fetch ('http://localhost:4000/carrito')
-        const data =  await response.json ()
-        setlibrosCarrito(data)
-    }
-    console.log(librosCarrito)
+    let search = window.location.search;
+    let params = new URLSearchParams(search);
+    let user = params.get("user");
+    const response = await fetch(`http://localhost:4000/carrito/${user}`);
+    const result = await response.json();
+    setlibrosCarrito([...result.data]);
+  };
 
-    const BorrarDeCarrito = async (id_ejemplar) => {
-        await fetch (`http://localhost:4000/carrito/${id_ejemplar}`, {
-            method: "DELETE",
-        })
-        (window.location.href = 'http://localhost:3000/librosCarrito')
-    }
+  const BorrarDeCarrito = async (id_ejemplar) => {
+    let search = window.location.search;
+    let params = new URLSearchParams(search);
+    let user = params.get("user");
+    await fetch(`http://localhost:4000/carrito/${id_ejemplar}`, {
+      method: "DELETE",
+      data: JSON.stringify(id_ejemplar),
+      headers: { "Content-Type": "application/json" , "user":user} 
+     
+    })
+    cargarCarrito()
+  };
 
-    useEffect(() => {
-        cargarCarrito()
-    }, [])
+  useEffect(() => {
+    cargarCarrito();
+  }, []);
 
   const Comprar = (cantidad, precioTotal) => {
     let search = window.location.search;
@@ -34,21 +41,21 @@ function BloqueCarrito() {
       .then((res) => (window.location.href = res.init_point))
       .catch(console.error);
   };
-
+  
   return (
     <div className="item-carrito-container">
       <div className="flex-car">
         {librosCarrito.length > 0 ? (
           librosCarrito.map((libros, i) => (
             <div key={i} className="item-carrito">
-              <img src={libros.img}></img>
+              <img src={require(`../imagenes/${libros.img}`)}></img>
               <div>
                 <p className="titulo-carr">{libros.titulo} </p>
                 <p>Autor : {libros.autor} </p>
                 <p>Precio : $ {libros.precio}</p>
                 <p>Cantidad : {libros.cantidad}</p>
                 <Button
-                  onClick={() => borrarDeCarrito(libros.id_ejemplar)}
+                  onClick={() => BorrarDeCarrito(libros.id_ejemplar)}
                   variant="contained"
                   sx={{
                     backgroundColor: "#8381FF",
@@ -75,8 +82,7 @@ function BloqueCarrito() {
           {librosCarrito.length
             ? librosCarrito.reduce(
                 (previousValue, currentValue) =>
-                  previousValue +
-                  currentValue.precio * currentValue.cantidad,
+                  previousValue + currentValue.precio * currentValue.cantidad,
                 0
               )
             : "0"}
@@ -99,8 +105,7 @@ function BloqueCarrito() {
                 ? librosCarrito.reduce(
                     (previousValue, currentValue) =>
                       previousValue +
-                      currentValue.precio *
-                        currentValue.cantidad,
+                      currentValue.precio * currentValue.cantidad,
                     0
                   )
                 : 0,
