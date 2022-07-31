@@ -1,24 +1,17 @@
 const url = "https://api.mercadopago.com/checkout/preferences";
 const axios = require("axios");
 
-export  const createPayment = async (payer_email, quantity, unit_price) => {
+export  const createPayment = async (payer_email, quantity, unit_price , product) => {
 
   const body = {
     payer_email,
     items: [
-      {
-        title: "Compra en Ebooks",
-        description: "Tu mejor opcion en Libros",
-        picture_url: "http://www.myapp.com/myimage.jpg",
-        category_id: "category123",
-        quantity: quantity,
-        unit_price: unit_price
-      },
+      ...product
     ],
     back_urls: {
-      failure: "/",
+      failure: "http://localhost:3000/miscompras",
       pending: "/pending",
-      success: `http://localhost:3000/home/${payer_email}`
+      success: `http://localhost:3000/miscompras?`
     },
   };
 
