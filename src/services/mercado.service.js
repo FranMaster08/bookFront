@@ -33,7 +33,7 @@ export const createPayment = async (
     payer_email,
     items: [...itemsComprados],
     back_urls: {
-      failure: `http://localhost:4000/miscompras?${result}user=${payer_email}`,
+      failure: `http://localhost:4000/fallo/${payer_email}`,
       pending: "/pending",
       success: `http://localhost:4000/miscompras?${result}user=${payer_email}`,
     },
