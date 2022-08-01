@@ -86,7 +86,7 @@ function HeaderAdm(){
                         </DropdownItem>
                         <DropdownItem divider className="linea-2-drop"/>
                         <DropdownItem>
-                        <Link to ={`/ventas/${datos.correo}`} className='resfo' >Ventas</Link>
+                        <Link to ={`/miscompras?user=${datos.correo}`} className='resfo' >Ventas</Link>
                         </DropdownItem>
                         <DropdownItem divider className="linea-3-drop"/>
                         <DropdownItem>

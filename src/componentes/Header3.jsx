@@ -17,7 +17,6 @@ function Header3(){
         const response = await fetch(`http://localhost:4000/Usuario2/${correo}`)
         const data = await response.json()
         setDatos(data);
-        console.log(data)
     };
 
     useEffect(() => {
@@ -29,7 +28,7 @@ function Header3(){
     const abrirCerrarDropdown=()=>{
         setDropdown(!dropdown);
     }
-    console.log(datos)
+ 
 
     const botonHome = async (e) => {
         e.preventDefault();
@@ -37,7 +36,6 @@ function Header3(){
             console.log('bien')
             (window.location.href = `http://localhost:3000/homeadmin/${datos.correo}`)
         }   else {
-            console.log('va para home nomas')
             (window.location.href = `http://localhost:3000/home/${datos.correo}`)
         }
     };
@@ -50,7 +48,7 @@ function Header3(){
                 <Button type='submit' className="icono-casita3">
                     <ion-icon name="home"></ion-icon>
                 </Button>
-                <Link to ={`/carrito?carrito=${datos.correo}`} className="icono-carrito3">
+                <Link to ={`/carrito?user=${datos.correo}`} className="icono-carrito3">
                     <ion-icon name="cart"></ion-icon>
                 </Link>
                 <a className="icono-persona3" target="_blank"></a>
@@ -65,7 +63,7 @@ function Header3(){
                         </DropdownItem>
                         <DropdownItem divider className="linea-1-drop"/>
                         <DropdownItem>
-                        <Link to ={`/miscompras/${datos.correo}`} className='resfo' >Mis Compras</Link>
+                        <Link to ={`/miscompras?user=${datos.correo}`} className='resfo' >Mis Compras</Link>
                         </DropdownItem>
                         <DropdownItem divider className="linea-2-drop"/>
                         <DropdownItem>

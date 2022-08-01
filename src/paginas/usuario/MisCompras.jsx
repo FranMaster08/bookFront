@@ -11,9 +11,9 @@ function MisCompras() {
     const cargarCompra = async () => {
         let search = window.location.search;
         let params = new URLSearchParams(search);
-        let user = params.get("name");
+        let user = params.get("user");
         console.log("data leida :", user);
-        const response = await fetch (`http://localhost:4000/miscompras/fran`)
+        const response = await fetch (`http://localhost:4000/miscompras/${user}`)
         const data =  await response.json ()
         setCompra([...data.compras])
     }
@@ -31,10 +31,9 @@ function MisCompras() {
                     {compra.length > 0 ? (
                     compra.map((libros, i) => (
                         <div key={i} className="item-carrito">
-                        <img src={libros.img}></img>
+                        <img src={  libros.img ? require(`../../imagenes/${libros.img}`) : ""}></img>
                         <div>
                             <p className="titulo-carr">{libros.titulo} </p>
-                            <p>Imagen: {libros.img} </p>
                             <p>Precio: {libros.precio} </p>
                             <p>Fecha : {libros.fechacompra}</p>
                             <p>Nombre de Usuario : {libros.nombreusuario}</p>

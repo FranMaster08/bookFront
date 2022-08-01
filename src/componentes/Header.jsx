@@ -82,7 +82,7 @@ function Header(){
                         </DropdownItem>
                         <DropdownItem divider className="linea-1-drop"/>
                         <DropdownItem>
-                            <Link to ={`/miscompras/${datos.correo}`} className='resfo' >Mis Compras</Link>
+                            <Link to ={`/miscompras?user=${datos.correo}`} className='resfo' >Mis Compras</Link>
                         </DropdownItem>
                         <DropdownItem divider className="linea-2-drop"/>
                         <DropdownItem>
