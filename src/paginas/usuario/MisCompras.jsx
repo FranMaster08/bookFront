@@ -9,11 +9,15 @@ function MisCompras() {
     const [compra, setCompra] = useState([])
 
     const cargarCompra = async () => {
-        const response = await fetch ('http://localhost:4000/comprayventa')
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let user = params.get("name");
+        console.log("data leida :", user);
+        const response = await fetch (`http://localhost:4000/miscompras/fran`)
         const data =  await response.json ()
-        setCompra(data)
+        setCompra([...data.compras])
     }
-    console.log(compra)
+  
 
     useEffect(() => {
         cargarCompra()
@@ -23,7 +27,6 @@ function MisCompras() {
         <>
             <Header />
             <div className='miscompras-todo'>
-                dsad
                 <div className="flex-car">
                     {compra.length > 0 ? (
                     compra.map((libros, i) => (
@@ -33,8 +36,7 @@ function MisCompras() {
                             <p className="titulo-carr">{libros.titulo} </p>
                             <p>Imagen: {libros.img} </p>
                             <p>Precio: {libros.precio} </p>
-                            <p>Metodo de pago : {libros.metodopago} </p>
-                            <p>Fecha : {libros.fecha}</p>
+                            <p>Fecha : {libros.fechacompra}</p>
                             <p>Nombre de Usuario : {libros.nombreusuario}</p>
                         </div>
                         </div>

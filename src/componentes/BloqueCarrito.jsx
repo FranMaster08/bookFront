@@ -36,8 +36,8 @@ function BloqueCarrito() {
   const Comprar = (cantidad, precioTotal) => {
     let search = window.location.search;
     let params = new URLSearchParams(search);
-    let Email = params.get("carrito");
-    createPayment(Email, cantidad, precioTotal)
+    let Email = params.get("user");
+    createPayment(Email, cantidad, precioTotal,librosCarrito )
       .then((res) => (window.location.href = res.init_point))
       .catch(console.error);
   };

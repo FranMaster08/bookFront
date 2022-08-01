@@ -1,17 +1,41 @@
 const url = "https://api.mercadopago.com/checkout/preferences";
 const axios = require("axios");
 
-export  const createPayment = async (payer_email, quantity, unit_price , product) => {
+const serialize = function (obj) {
+  var str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
+};
+
+export const createPayment = async (
+  payer_email,
+  quantity,
+  unit_price,
+  product
+) => {
+  const result = product.reduce(
+    (prev, current) => prev + serialize(current) + "&",
+    ""
+  );
+  const itemsComprados = product.map((libros) => ({
+    title: libros.titulo,
+    description: "Tu mejor opcion en Libros",
+    picture_url: "http://www.myapp.com/myimage.jpg",
+    category_id: "libros",
+    quantity: libros.cantidad,
+    unit_price: libros.precio,
+  }));
 
   const body = {
     payer_email,
-    items: [
-      ...product
-    ],
+    items: [...itemsComprados],
     back_urls: {
-      failure: "http://localhost:3000/miscompras",
+      failure: `http://localhost:4000/miscompras?${result}user=${payer_email}`,
       pending: "/pending",
-      success: `http://localhost:3000/miscompras?`
+      success: `http://localhost:3000/miscompras?${result}user=${payer_email}`,
     },
   };
 
@@ -24,5 +48,3 @@ export  const createPayment = async (payer_email, quantity, unit_price , product
 
   return payment.data;
 };
-
-
